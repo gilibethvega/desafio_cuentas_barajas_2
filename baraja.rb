@@ -9,10 +9,10 @@ class Baraja
     @cartas.shuffle
   end
   def primera_carta
-    @cartas.pop
+    @cartas.pop(1)
   end
   def repartir_mano
-    @cartas.pop(5)
+    @cartas[0..4]
   end
 end
 
@@ -28,7 +28,7 @@ n.times do |i|
 end
 
 baraja_cartas = Baraja.new(array_card) #Instanciando barajas
-print shuffle_cards = baraja_cartas.barajar #Barajando cartas
-print first_card = baraja_cartas.primera_carta #sacar primera carta
+shuffle_cards = baraja_cartas.barajar #Barajando cartas
+print first_card = baraja_cartas.primera_carta #sacar primera carta que sería la última del arreglo usando .pop
 print hand_cards = baraja_cartas.repartir_mano #mano de 5 cartas
 
