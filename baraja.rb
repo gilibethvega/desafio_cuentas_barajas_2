@@ -6,13 +6,13 @@ class Baraja
     @cartas = cartas
   end
   def barajar
-    cartas.shuffle
+    @cartas.shuffle
   end
   def primera_carta
-    cartas.pop
+    @cartas.pop
   end
   def repartir_mano
-    cartas.pop(5)
+    @cartas.pop(5)
   end
 end
 
@@ -28,7 +28,7 @@ n.times do |i|
 end
 
 baraja_cartas = Baraja.new(array_card) #Instanciando barajas
-shuffle_cards = baraja_cartas.barajar #Barajando cartas
+print shuffle_cards = baraja_cartas.barajar #Barajando cartas
 print first_card = baraja_cartas.primera_carta #sacar primera carta
-hand_cards = baraja_cartas.repartir_mano #mano de 5 cartas
+print hand_cards = baraja_cartas.repartir_mano #mano de 5 cartas
 
